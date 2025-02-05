@@ -1,0 +1,143 @@
+Connect Bitget API
+Link with your Bitget account through API key. All your assets and your positions are managed by Bitget.
+
+Register a Bitget account: https://partner.bitget.online/bg/HPM3BN (Referral code: 
+1qlg
+)
+
+Click on your wallet in the top right-hand corner of the screen and go to the "Wallet Management" tab or visit https://app.copin.io/wallet-management
+
+
+Click "Create" at " Bitget Exchange" to start linking your Bitget Exchange account to app.copin.io through API key.
+
+
+The connection process involves:
+
+Bitget Account Setup
+
+Create an account, unless you already have one.
+
+Identify Verification
+
+Identity Verification or Know Your Customer (KYC) standards are required for all users of Bitget.
+
+API Key Creation
+
+Generate an API key for Copin Analyzer integration.
+
+Fund Deposit and Transfer
+
+Deposit funds into Bitget and transfer them to your future account.
+
+For any difficulties, we invite you to join the Copin.io community where our admin team is ready to assist.
+
+1. Bitget Account Setup
+Step 1: Sign up for a Bitget account.
+
+To create a new account on Bitget, you must first visit the Bitget website.
+
+Then click on the "Sign up" button to get started.
+
+Step 2: Account Registration
+
+You can choose to register either with your email address or your telephone number
+
+Enter a secure password
+
+Use the referral code 1qlg for initial account benefits.
+
+Accept the User Agreement and Privacy Policy
+
+Click on "Create Account"
+
+
+Step 3: Confirm your account
+
+After submitting the registration form, you will be asked to verify your account. Bitget will send a verification email containing a confirmation link.
+
+Click on this link to activate your account.
+
+2. Identify Verification
+Step 1: Access the Identity Verification Page
+
+Click on your profile in the top right-hand corner of the screen and go to the "Identify Verification" tab or visit https://www.bitget.online/verified/enter
+
+
+Then click on "Verify" to perform Level 1 verification.
+
+
+Step 2: Complete KYC
+
+Fill in your personal details, such as country/region, first name, last name and provide an official identity document such as ID card or driver's license.
+
+
+Once you've provided this information, take a photo of both sides of your identity document and take a selfie using either your webcam or your Bitget mobile application. Avoid wearing glasses or a hat, and make sure you are exposed to good light.
+
+
+After submitting your selfie, you will receive a notification that your KYC verification information has been successfully submitted.
+
+
+3. API Key Creation
+Step 1: Access the API keys page
+
+Click on your profile in the top right-hand corner of the screen and go to the "API keys" tab or visit https://www.bitget.online/account/newapi
+
+
+Read and agree to Bitget's API Keys Terms & Conditions
+
+
+Step 2: Create API Key
+
+Click "Create API Key"
+
+
+Click "System-generated"
+
+
+Step 3: Modify API Info
+
+Choose a simple, memorable note for easy identification.
+
+Create "Passphrase (API token)" API
+
+Select "Read-write"
+
+
+Ensure only "Orders", "Holdings" and "Trade" are selected.
+
+
+Step 4: Final Security Confirmation
+
+Complete the process with a final security verification then "Confirm".
+
+
+The Access APIKey and SecretKey are displayed, so let's copy and fill in Copin Wallet Management
+
+
+Step 5: Complete creating Bitget Wallet on Copin.io
+
+Access https://app.copin.io/wallet-management
+
+Fill Bitget API Key, Secret Key and Pass Phrase you just created in the previous step.
+
+
+4. Fund Deposit and Transfer
+Step 1: Make a deposit on Bitget
+
+Before you start copy trading, you'll need to make a deposit into your BITGET account. You can choose between several methods for depositing money into your account: cryptocurrency deposit, credit/debit card, P2P, Third Party or bank transfer.
+
+Depending on the method you choose, Bitget will give you the steps to follow to make your deposit.
+
+Step 2: Transfer funds to Futures account
+
+Head to the "Assets Overview".
+
+
+Click "Transfer"
+
+
+Input the USDT amount into "Transfer Amount" then Confirm
+
+
+After transferring funds to your Futures Account on Bitget, you are ready to begin the process of copy trading on Copin.io.
+Recommend link: https://docs.copin.io/features/centralized-copy-trading-ccp/connect-bitget-api

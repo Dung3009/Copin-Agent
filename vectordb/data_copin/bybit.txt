@@ -1,0 +1,155 @@
+Connect Bybit API
+Link with your Bybit account through API key. All your assets and your positions are managed by Bybit.
+
+Register a Bybit account: https://partner.bybitglobal.com/b/copin (Referral code: 
+COPIN
+)
+
+Click on your wallet in the top right-hand corner of the screen and go to the "Wallet Management" tab or visit https://app.copin.io/wallet-management
+
+
+Click "Create" at " Bybit Exchange" to start linking your Bybit Exchange account to app.copin.io through API key.
+
+
+The connection process involves:
+
+Bybit Account Setup
+
+Create an account, unless you already have one.
+
+Identify Verification
+
+Identify Verification or Know Your Customer (KYC) standards are required for all users of Bybit.
+
+API Key Creation
+
+Generate an API key for Copin Analyzer integration.
+
+Fund Deposit and Transfer
+
+Deposit funds into Bybit and transfer them to your Unified Trading Account
+
+Setup Trading mode
+
+Set Isolate Margin and Hedge Mode for all trading pairs
+
+For any difficulties, we invite you to join the Copin.io community where our admin team is ready to assist.
+
+1. Bybit Account Setup
+Step 1: Sign up for a Bybit account.
+
+To create a new account on Bybit, you must first visit the Bybit Website.
+
+Then click on the "Sign up" button to get started.
+
+Step 2: Account Registration
+
+You can choose to register either with your email address or your telephone number
+
+Enter a secure password
+
+Use the referral code COPIN for initial account benefits.
+
+Click on agree to Bybit Terms of Service and Privacy Policy
+
+Click on "Get My Welcome Gifts"
+
+
+Step 3: Confirm your account
+
+After submitting the registration form, you will be asked to verify your account. Bybit will send a verification email with a confirmation code.
+
+Enter the code and complete email verification.
+
+2. KYC Verification
+Step 1: Access the Identity Verification Page
+
+Hover over your profile in the top right corner of the screen and select "Account & Security"
+
+
+Proceed to "Identity Verification" to access the verification page. Alternatively, you can directly access the verification page using this link: https://www.bybitglobal.com/user/accounts/auth/personal.
+
+
+Step 2: Complete KYC
+
+Click on "Verify Now" and complete the verification process as instructed by Bybit to verify your account.
+
+
+Select your country of residence. Choose the document type. Then click "Confirm" to proceed. Alternatively, you can select "Verify with App" to continue the verification process on your mobile device.
+
+
+Please complete all the verification steps requested by Bybit to finish verifying your account. Note that the verification device must have a camera to enable live image verification.
+
+3. API Key Creation
+Step 1: Access the API keys page
+
+Hover over your profile in the top right corner of the screen and select "API" or click on the link https://www.bybitglobal.com/app/user/api-management .
+
+
+Step 2: Create API Key
+
+Click "Create New Key"
+
+
+Click "System-generated API Keys"
+
+
+Step 3: Modify API Info
+
+Make sure only the following options are selected: "API Transaction", "Read-Write", "No IP restriction", and "Unified Trading".
+
+Choose a simple, memorable note for easy identification in "Name for the API Key".
+
+
+Step 4: Final Security Confirmation
+
+Complete the process with a final security verification then "Confirm".
+
+
+The newly created API key has a validity period of only 90 days.
+
+
+The Access APIKey and SecretKey are displayed, so let's copy and fill in Copin Wallet Management
+
+Step 5: Complete creating Bybit Wallet on Copin.io
+
+Access https://app.copin.io/wallet-management
+
+Fill in the API Key and Secret Key you just created in the previous step.
+
+
+4. Fund Deposit and Transfer
+Step 1: Make a deposit on Bybit
+
+Before you start copy trading, you'll need to make a deposit into your Bybit account. You can choose between several methods for depositing money into your account: cryptocurrency deposit, credit/debit card, P2P, Third Party or bank transfer.
+
+Depending on the method you choose, Bitget will give you the steps to follow to make your deposit.
+
+Step 2: Transfer funds to Futures account
+
+
+Click "Transfer"
+
+
+Make sure to transfer from "Funding" to "Unified Trading". And input the USDT amount into "Amount" then Confirm.
+
+
+After transferring funds to your Unified Trading on Bybit, you are nearly ready to begin the process of copy trading on Copin.io.
+
+If you encounter the INVALID API KEY error, please ensure that: 
+
+Your futures account balance is greater than 0 (refer to Section 4. Fund Deposit and Transfer). 
+
+You have switched to Isolated Margin and Hedge Mode (refer to Section 5. Setup Trading Mode).
+
+5. Setup Trading mode
+These settings ensure that the copy trading system operates in the most logical manner.
+
+Hover over the "Derivatives" tab. Next, select "USDT Perpetuals". Then, choose any random trading pair. In this example, we'll use "BTC/USDT".
+
+
+Click on "Settings" in the top right corner.
+
+
+Set the margin mode to "Isolated Margin" and the position mode to "Hedge Mode". Apply these settings to all USDT pairs.
+Recommend link: https://docs.copin.io/features/centralized-copy-trading-ccp/connect-bybit-api

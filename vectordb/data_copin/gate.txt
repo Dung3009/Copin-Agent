@@ -1,0 +1,147 @@
+Connect Gate API
+Link with your Gate account through API key. All your assets and your positions are managed by Gate.
+
+Register a Gate account: https://www.gate.io/signup/AgBFAApb?ref_type=103 (Referral code: 
+AgBFAApb
+)
+
+Click on your wallet in the top right-hand corner of the screen and go to the "Wallet Management" tab or visit https://app.copin.io/wallet-management
+
+
+Click "Create" at " Gate Exchange" to start linking your Gate Exchange account to app.copin.io through API key.
+
+
+The connection process involves:
+
+Gate Account Setup
+Create an account, unless you already have one.
+Identify Verification
+
+Identity Verification or Know Your Customer (KYC) standards are required for all users of Gate.
+
+API Key Creation
+
+Generate an API key for Copin Analyzer integration.
+
+Fund Deposit and Transfer
+
+Deposit funds into Gate and transfer them to your future account.
+
+Setup Trading mode
+
+Set Hedge Mode for all trading pairs
+
+For any difficulties, we invite you to join the Copin.io community where our admin team is ready to assist.
+
+1. Gate Account Setup
+Step 1: Sign up for a Gate account.
+
+To create a new account on Gate, you must first visit the Gate Website.
+
+Step 2: Account Registration
+
+You can choose to register either with your email address or your telephone number
+
+Enter a secure password
+
+Use the referral code AgBFAApb for initial account benefits.
+
+Accept the User Agreement and Privacy Policy
+
+Click on "Sign Up"
+
+
+Step 3: Confirm your account
+
+After submitting the registration form, you will be asked to verify your account. Gate will send a verification code into your email.
+
+Fill in that code to activate your account.
+
+
+2. KYC Verification
+Step 1: Access the Identity Verification Page
+
+Click on your profile in the top right-hand corner of the screen and go to the "Individual/Identify Verification" tab or visit https://www.gate.io/myaccount/kyc_home
+
+
+Then click on "Verify Now" to perform Level 1 verification.
+
+
+Step 2: Complete KYC
+
+Fill in your personal details, such as country/region, first name, last name and provide an official identity document such as ID card or driver's license.
+
+
+Once you've provided this information, take a photo of both sides of your identity document
+
+
+After submitting your documents, you must take a selfie using either your webcam or your Gate mobile application. Avoid wearing glasses or a hat, and make sure you are exposed to good light. After all, you will receive a notification that your KYC verification information has been successfully submitted.
+
+3. API Key Creation
+Step 1: Access the API keys page
+
+Click on your profile in the top right-hand corner of the screen and go to the "API Management" tab or visit https://www.gate.io/myaccount/api_key_manage
+
+
+Step 2: Create API Key
+
+Click "Create API Key"
+
+
+Step 3: Modify API Info
+
+Choose a simple, memorable note for easy identification on "API Key Remark".
+
+Select all following guide pics below.
+
+
+
+Step 4: Final Security Confirmation
+
+Complete the process with a final security verification by choosing all, then click "I Accept".
+
+
+
+The Access APIKey and SecretKey are displayed, so let's copy and fill in Copin Wallet Management
+
+
+Note: The API key is only valid for 90 days.
+
+
+Step 5: Complete creating Gate Wallet on Copin.io
+
+Access https://app.copin.io/wallet-management
+
+Fill Gate API Key and Secret Key just created in the previous step.
+
+
+4. Fund Deposit and Transfer
+Step 1: Make a deposit on Gate
+
+Before you start copy trading, you'll need to make a deposit into your Gate account. You can choose between several methods for depositing money into your account: cryptocurrency deposit, credit/debit card, P2P, Third Party or bank transfer.
+
+Depending on the method you choose, Gate will give you the steps to follow to make your deposit.
+
+Step 2: Transfer funds to Futures account
+
+Head to the "Assets" and find "Futures Account" then click on.
+
+
+Click "Transfer"
+
+
+Input the USDT amount into "Transfer Amount" then Confirm
+
+
+After transferring funds to your Perpetual Futures on Gate, you are nearly beginning the process of copy trading on Copin.io.
+
+5. Setup Trading mode
+Hover over "Derivatives" on the top bar. Next, select "Perpetual Futures" and choose any trading pair.
+
+
+Click on the "Settings" icon.
+
+
+Select "Hedge Mode" and confirm. Before proceeding, ensure you have transferred funds and switched to "Perpetual Futures".
+
+Recommend link: https://docs.copin.io/features/centralized-copy-trading-ccp/connect-gate-api

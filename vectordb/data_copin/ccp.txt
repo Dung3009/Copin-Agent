@@ -1,0 +1,78 @@
+Centralized Copy-Trading (CCP)
+Copy trading on Copin Analyzer allows users to effortlessly mirror the strategies of experienced traders from perp DEXes, blending convenience with expertise.
+
+At Copin, the Copy Trading feature elegantly addresses the diverse needs within Perp DEXs, offering a dual advantage. It serves as an educational platform for new users, guiding them through a controlled and risk-managed trading environment, while also providing advanced traders with sophisticated tools to enhance their trading strategies. This balanced approach ensures that Copin is an invaluable resource for traders at any level of expertise.
+
+How to start Copy Trading?
+The process of copy trading involves choosing an experienced trader to follow and then mirroring their trading activities in your own portfolio. Here’s how it works:
+
+Step 1: Selecting a Trader
+In the first step of Copin's Copytrading, selecting a trader is streamlined through Trader Explorer, Leaderboard, or by a known trader's wallet address.
+
+
+Ensure their performance and strategies align with your investment goals with Copin's integrated assessment tools.
+
+Once you find the right match, you can begin copying their trades with a simple click on the 'Copy Trader' button.
+
+
+Step 2: Investment Allocation
+Select and fill in all the required information in the setup section:
+
+
+Basic settings
+Label
+
+A field where the user can assign a custom label or name for the copying order.
+
+Copy Wallet
+
+Offers a dropdown menu for selecting the appropriate wallet for copy trading, with an additional option to create a new one.
+
+Margin
+
+Sets the upper limit for the margin per order in USD when mirroring a trader's actions.
+
+Trading Pairs
+
+Provides options for users for selecting specific cryptocurrency pairs to follow, such as BTC and ETH.
+
+Follow the trader: Enables users to automatically replicate all trade orders made by the selected trader, regardless of the specific cryptocurrency pairs involved.
+
+Leverage
+
+Allows users to adjust their leverage level, ranging from 2x to 20x, thereby scaling their buying power accordingly.
+
+Reverse Copy
+
+Toggles the option for users to execute trades in the opposite direction to the trader’s actions.
+
+Stop Loss / Take Profit
+Stop Loss
+
+Position Stop Loss automatically closes a copied position if the market moves unfavorably, limiting potential losses.
+
+Take Profit
+
+Position Take Profit automatically closes a copied position to secure profits when the market reaches your desired level.
+
+Advance settings
+Max Margin Per Position
+
+Sets a maximum margin limit per position when the trader increases the position.
+
+Margin Protection
+
+This feature adjusts your order volumes to match the recent trading behavior of the selected trader in which the system analyzes the trader's last 10 orders, ensuring your investments proportionally reflect any changes in their trading strategy, without relying on fixed order sizes.
+
+Skip Lower Leverage Position
+
+Skips copying trades with lower leverage than specified.
+
+Step 3: Execute the Copy Trading Order
+Tick to Checkbox: Requires users to confirm they have read and agree to the Copytrading Service Agreement.
+
+
+Initiates the copy trading process based on the settings by clicking on Copy Trade button.
+
+
+Open Telegram to link your Telegram account with the Copin.io BOT to receive notifications every time a trader starts trading and the status of your copied trades.
