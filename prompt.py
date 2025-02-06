@@ -456,51 +456,56 @@ Answer: {{answer}}
 
 """
 
-prompt_template_query_els="""
+prompt_template_query_els="""Task: Generate an Elasticsearch query based on user requirements.
 
-Task: Xuất 1 elasticsearch query theo yêu cầu của user.
+Here are the variables available in Elasticsearch:
 
-Đây là những variable trong elasticsearch
+account:string, Trader's wallet address.
+type:string. Only 5 possible values: "D7", "D15", "D30", "D60", "FULL"
+D7, D15, D30, D60: Statistics for the last 7, 15, 30, 60 days respectively
+FULL: Statistics since trader account creation
 
-account:string, Địa chỉ tài khoản của trader.
-type:string. Chỉ có 5 giá trị cho phần này, đó là: "D7", "D15", "D30", "D60", "FULL"
-D7, D15, D30, D60: Đánh dấu đây là số liệu thống kê trong vòng 7, 15, 30, 60 ngày gần đây
-FULL: Số liệu thống kê kể từ lúc trader tạo tài khoản
-
-avgDuration, avgLeverage, avgRoi:float, Thời gian, đòn bẩy, ROI trung bình.
-gainLossRatio:float, chỉ số profit factor của trader nhưng chưa thực tế
-realisedGainLossRatio: chỉ số profit factor thực tế của của trader
-pnl: Tổng lợi nhuận/lỗ 
-realisedAvgRoi, realisedPnl: ROI trung bình thực tế và tổng lợi nhuận/lỗ thực hiện.
-totalFee, totalGain, totalLoss, totalWin:float, Các chỉ số tổng hợp về phí, lợi nhuận, lỗ, số lệnh thắng.
-winRate:float, tỉ lệ thắng của trader
-realisedMaxDrawdown, realisedMaxDrawdownPnl:float, Mức suy giảm lớn nhất trong ROI và PnL thực tế. 
-realisedMaxPnl: Lãi tối đa thực tế đã đạt được (đã đóng lệnh), tính bằng đơn vị tiền tệ.
-realisedMaxRoi: Tỷ lệ lợi nhuận đầu tư tối đa thực tế (ROI) đạt được từ các lệnh đã đóng.
-realisedProfitLossRatio: Tỷ lệ giữa lợi nhuận thực tế và lỗ thực tế, giúp đánh giá hiệu quả giao dịch.  Được tính bằng công thức (tổng pnl lệnh thắng/ số lệnh thắng)/(Tổng pnl lệnh thua/số lệnh thua)
-realisedProfitRate: Tỷ lệ phần trăm lợi nhuận thực tế đạt được so với vốn đầu tư ban đầu.
-profitLossRatio, profitRate: realisedProfitLossRatio, realisedProfitRate nhưng chưa thực tế
-realisedTotalGain: Tổng lợi nhuận thực tế đạt được từ các giao dịch.
-realisedTotalLoss: Tổng lỗ thực tế đã xảy ra từ các giao dịch.
-runTimeDays: Số ngày đã trôi qua kể từ khi các giao dịch bắt đầu, tính đến thời điểm hiện tại.
-statisticAt: Thời điểm mà các số liệu thống kê được ghi nhận.
-totalFee: Tổng phí giao dịch phát sinh trong toàn bộ các lệnh.
-totalGain: Tổng lợi nhuận (bao gồm cả các giao dịch chưa đóng) tính đến thời điểm hiện tại.
-totalLiquidation: Tổng số lần thanh lý bắt buộc của các lệnh (forced liquidation).
-totalLiquidationAmount: Tổng giá trị bị thanh lý bắt buộc.
-totalLose: Tổng số lệnh thua, bao gồm cả những lệnh chưa đóng.
-totalLoss: Tổng lỗ phát sinh từ tất cả các giao dịch (bao gồm cả giao dịch chưa đóng).
-totalTrade: Tổng số lượng giao dịch đã thực hiện.
-totalVolume: Tổng khối lượng giao dịch (volume) đã thực hiện.
-totalWin: Tổng số lệnh thắng, bao gồm cả những lệnh chưa đóng.
-type: Chuỗi ký tự biểu thị khoảng thời gian thống kê. Ví dụ, "D7" là 7 ngày gần nhất, "D15" là 15 ngày gần nhất.
-updatedAt: Thời gian cập nhật gần nhất của bản ghi.
-winRate: Tỷ lệ phần trăm các lệnh thắng so với tổng số lệnh, tính theo thời gian thực.
-pairs: Danh sách các cặp giao dịch (ví dụ: BTC/USDT, ETH/USDT) liên quan đến các giao dịch.
-
+avgDuration, avgLeverage, avgRoi:float, Average duration, leverage, and ROI.
+gainLossRatio:float, Trader's profit factor (unrealized)
+realisedGainLossRatio: Trader's actual profit factor (realized)
+pnl: Total profit/loss
+realisedAvgRoi, realisedPnl: Actual average ROI and realized profit/loss.
+totalFee, totalGain, totalLoss, totalWin:float, Aggregate metrics for fees, gains, losses, and winning trades.
+winRate:float, Trader's win rate
+realisedMaxDrawdown, realisedMaxDrawdownPnl:float, Maximum drawdown in ROI and PnL (realized).
+realisedMaxPnl: Maximum realized profit (closed positions), in currency units.
+realisedMaxRoi: Maximum realized Return on Investment from closed positions.
+realisedProfitLossRatio: Ratio between realized profits and losses, calculated as (total winning pnl/winning trades)/(total losing pnl/losing trades)
+realisedProfitRate: Realized profit percentage relative to initial investment.
+profitLossRatio, profitRate: Unrealized versions of realisedProfitLossRatio, realisedProfitRate
+realisedTotalGain: Total realized gains from trades.
+realisedTotalLoss: Total realized losses from trades.
+runTimeDays: Days elapsed since trading began.
+statisticAt: Timestamp when statistics were recorded.
+totalFee: Total trading fees incurred.
+totalGain: Total gains (including open positions).
+totalLiquidation: Total number of forced liquidations.
+totalLiquidationAmount: Total value of liquidated positions.
+totalLose: Total losing trades (including open positions).
+totalLoss: Total losses (including open positions).
+totalTrade: Total number of trades executed.
+totalVolume: Total trading volume.
+totalWin: Total winning trades (including open positions).
+type: Time period identifier (e.g., "D7" for last 7 days).
+updatedAt: Last update timestamp.
+winRate: Real-time win rate percentage.
+pairs: List of trading pairs (e.g., BTC/USDT, ETH/USDT).
+protocol: Trading platform used by trader (must be uppercase). Common protocols:
+- "HYPERLIQUID"
+- "GMX"
+- "GMX_V2" 
+- "KWENTA"
+- "GNS"
+- "POLYNOMIAL"
+- "SYNTHETIX"
 
 Examples:
-# Tìm cho tôi các trader có Pnl lớn hơn 300000
+# Find traders with Pnl greater than 300000
 {{
     "from" : 0,
     "size" : 10,
@@ -519,22 +524,52 @@ Examples:
                         "type" : "D7"
                     }}
                 }}
-
-
             ]
         }}
     }},
     "sort": [{{"pnl": {{"order": "desc"}}}}]
+}}
 
-Note:
-Đừng thêm bất kì giải thích hoặc xin lỗi trong câu trả lời 
-Câu trả lời chỉ bao gồm elasticsearch query
-Nếu không yêu cầu số lượng trong câu hỏi thì hãy mặc định size = 10
-Ưu tiên sort theo chỉ số trong yêu cầu của user
-Khi yêu cầu của user liên quan đến những giá trị %, thì lấy những giá trị trước dấu %, Ví dụ 20% thì lấy số 20
-Nếu không yêu cầu cụ thể về thời gian, hãy mặc định type là D7
+# Find traders with winRate > 60% and totalTrade > 50 in last 30 days
+{{
+    "from": 0,
+    "size": 10,
+    "query": {{
+        "bool": {{
+            "must": [
+                {{
+                    "range": {{
+                        "winRate": {{
+                            "gte": "60"
+                        }}
+                    }}
+                }},
+                {{
+                    "range": {{
+                        "totalTrade": {{
+                            "gte": "50"
+                        }}
+                    }}
+                }},
+                {{
+                    "match": {{
+                        "type": "D30"
+                    }}
+                }}
+            ]
+        }}
+    }},
+    "sort": [{{"winRate": {{"order": "desc"}}}}]
+}}
+
+Notes:
+Do not include any explanations or apologies in the response
+Response should only contain the Elasticsearch query
+If no quantity is specified in the question, default size = 10
+Prioritize sorting by metrics mentioned in user's request
+For percentage values in user requests, use the number before %, e.g., for 20% use 20
+If no specific time period is requested, default type is "D7"
 
 Question: {question}
-
-
 """
+
