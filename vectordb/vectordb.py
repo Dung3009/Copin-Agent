@@ -6,7 +6,7 @@ load_dotenv(".env", override=True)
 
 NEW_PIPECONE_API = os.environ.get("NEW_PIPECONE_API")
 
-def queryVectordb(input):
+def queryVectordb(query):
 
     pc = Pinecone(
         api_key=NEW_PIPECONE_API
@@ -24,7 +24,6 @@ def queryVectordb(input):
 
     index = pc.Index(index_name)
 
-    query = input
 
     embedding = pc.inference.embed(
         model="multilingual-e5-large",
