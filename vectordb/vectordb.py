@@ -59,18 +59,12 @@ def syncData():
     data = []
     for i in range(len(documents)):
         doc = documents[i].page_content
-        id = "vector" + str(i)
+        source =  documents[i].metadata['source']
+        id = source.replace('vectordb/data_copin/', '').replace('.txt','')
         data.append(
             {"id": id, "text": doc},
         )
-    embeddings = pc.inference.embed(
-        model="multilingual-e5-large",
-        inputs=[d["text"] for d in data],
-        parameters={"input_type": "passage", "truncate": "END"},
-    )
-
     index_name = "multilingual-e5-large"
-
     if not pc.has_index(index_name):
         pc.create_index(
             name=index_name,
@@ -93,3 +87,4 @@ def syncData():
         )
 
     index.upsert(vectors=vectors, namespace="copin_data")
+
