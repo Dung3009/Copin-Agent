@@ -6,48 +6,35 @@ load_dotenv(".env", override=True)
 
 NEW_PIPECONE_API = os.environ.get("NEW_PIPECONE_API")
 
-def queryVectordb(query):
+def queryVectordb(input):
+    try:
+        pc = Pinecone(api_key=NEW_PIPECONE_API)
+        index = pc.Index("multilingual-e5-large")
 
-    pc = Pinecone(
-        api_key=NEW_PIPECONE_API
-    )
-
-    index_name = "multilingual-e5-large"
-
-    if not pc.has_index(index_name):
-        pc.create_index(
-            name=index_name,
-            dimension=1024,
-            metric="cosine",
-            spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+        # Tạo embedding cho query
+        embedding = pc.inference.embed(
+            model="multilingual-e5-large",
+            inputs=[input],
+            parameters={"input_type": "query"},
         )
 
-    index = pc.Index(index_name)
+        # Query vectordb
+        result = index.query(
+            namespace="copin_data",
+            vector=embedding[0].values,
+            top_k=3,
+            include_values=False,
+            include_metadata=True,
+        )
 
+        # Kiểm tra score và trả về kết quả
+        if result.matches and result.matches[0]["score"] >= 0.8:
+            return result.matches[0]["metadata"]["text"]
+        return []
 
-    embedding = pc.inference.embed(
-        model="multilingual-e5-large",
-        inputs=[query],
-        parameters={"input_type": "query"},
-    )
-
-    result = index.query(
-        namespace="copin_data",
-        vector=embedding[0].values,
-        top_k=3,
-        include_values=False,
-        include_metadata=True,
-    )
-    try:
-        score = result.matches[0]["score"]
-        if score >= 0.8:
-            answer = result.matches[0]["metadata"]["text"]
-        else:
-            answer = []
     except Exception as e:
-        answer = []
-    return answer
-
+        print(f"Error in queryVectordb: {str(e)}")
+        return []
 
 def syncData():
     pc = Pinecone(

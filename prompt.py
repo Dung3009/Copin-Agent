@@ -507,47 +507,55 @@ protocol: Trading platform used by trader (must be uppercase). Common protocols:
 Examples:
 # Find traders with Pnl greater than 300000
 {{
-    "from" : 0,
-    "size" : 10,
+    "from": 0,
+    "size": 10,
+    "_source": ["account", "pnl"],
     "query": {{
         "bool": {{
             "must": [
                 {{
                     "range": {{
                         "pnl": {{
-                            "gte": "300000"
+                            "gte": 300000
                         }}
                     }}
                 }},
                 {{
                     "match": {{
-                        "type" : "D7"
+                        "type": "D7"
                     }}
                 }}
             ]
         }}
     }},
-    "sort": [{{"pnl": {{"order": "desc"}}}}]
+    "sort": [
+        {{
+            "pnl": {{
+                "order": "desc"
+            }}
+        }}
+    ]
 }}
 
 # Find traders with winRate > 60% and totalTrade > 50 in last 30 days
 {{
     "from": 0,
     "size": 10,
+    "_source": ["account", "winRate", "totalTrade"],
     "query": {{
         "bool": {{
             "must": [
                 {{
                     "range": {{
                         "winRate": {{
-                            "gte": "60"
+                            "gte": 60
                         }}
                     }}
                 }},
                 {{
                     "range": {{
                         "totalTrade": {{
-                            "gte": "50"
+                            "gte": 50
                         }}
                     }}
                 }},
@@ -559,7 +567,13 @@ Examples:
             ]
         }}
     }},
-    "sort": [{{"winRate": {{"order": "desc"}}}}]
+    "sort": [
+        {{
+            "winRate": {{
+                "order": "desc"
+            }}
+        }}
+    ]
 }}
 
 Notes:
@@ -569,7 +583,7 @@ If no quantity is specified in the question, default size = 10
 Prioritize sorting by metrics mentioned in user's request
 For percentage values in user requests, use the number before %, e.g., for 20% use 20
 If no specific time period is requested, default type is "D7"
+Always include "account" in _source field, and add any queried or sorted fields to _source
 
 Question: {question}
 """
-
