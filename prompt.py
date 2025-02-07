@@ -464,8 +464,8 @@ account:string, Trader's wallet address.
 type:string. Only 5 possible values: "D7", "D15", "D30", "D60", "FULL"
 D7, D15, D30, D60: Statistics for the last 7, 15, 30, 60 days respectively
 FULL: Statistics since trader account creation
-
-avgDuration, avgLeverage, avgRoi:float, Average duration, leverage, and ROI.
+avgLeverage, avgRoi:float,  leverage, and ROI.
+avgDuration: float, Average duration, in seconds
 gainLossRatio:float, Trader's profit factor (unrealized)
 realisedGainLossRatio: Trader's actual profit factor (realized)
 pnl: Total profit/loss
@@ -494,15 +494,96 @@ totalWin: Total winning trades (including open positions).
 type: Time period identifier (e.g., "D7" for last 7 days).
 updatedAt: Last update timestamp.
 winRate: Real-time win rate percentage.
-pairs: List of trading pairs (e.g., BTC/USDT, ETH/USDT).
-protocol: Trading platform used by trader (must be uppercase). Common protocols:
-- "HYPERLIQUID"
-- "GMX"
-- "GMX_V2" 
-- "KWENTA"
-- "GNS"
-- "POLYNOMIAL"
-- "SYNTHETIX"
+pairs: List of trading pairs with format : e.g., BTC-USDT, ETH-USDT, XRP-USDT,...
+protocol: Trading platform used by trader (must be uppercase). List protocols:
+"GMX",
+"GMX_AVAX",
+"KWENTA",
+"POLYNOMIAL",
+"GMX_V2",
+"COPIN",
+"GNS",
+"MUX",
+"LEVEL_ARB",
+"LEVEL_BNB",
+"MUX_ARB",
+"SYNTHETIX_V3",
+"EQUATION_ARB",
+"PERENNIAL_ARB",
+"APOLLOX_ARB",
+"GNS_POLY",
+"AVANTIS_BASE",
+"APOLLOX_BNB",
+"APOLLOX_BASE",
+"BLOOM_BLAST",
+"PARTICLE_BLAST",
+"LOGX_MODE",
+"LOGX_BLAST",
+"TIGRIS_ARB",
+"MYX_ARB",
+"MYX_LINEA",
+"PINGU_ARB",
+"VELA_ARB",
+"DEXTORO",
+"HMX_ARB",
+"KTX_MANTLE",
+"CYBERDEX",
+"YFX_ARB",
+"KILOEX_TAIKO",
+"KILOEX_OPBNB",
+"KILOEX_BNB",
+"ROLLIE_SCROLL",
+"HYPERLIQUID",
+"MUMMY_FANTOM",
+"SYNFUTURE_BASE",
+"DYDX",
+"MORPHEX_FANTOM",
+"VERTEX_ARB",
+"BSX_BASE",
+"UNIDEX_ARB",
+"GNS_BASE",
+"SYNTHETIX",
+"KILOEX_MANTA",
+"KILOEX_BASE",
+"LINEHUB_LINEA",
+"HOLDSTATION_ZKSYNC",
+"FOXIFY_ARB",
+"BMX_BASE",
+"DEPERP_BASE",
+"HORIZON_BNB",
+"POLYNOMIAL_L2",
+"SYNTHETIX_V3_ARB",
+"IDEX",
+"SYMMIO_BASE",
+"ZENO_METIS",
+"ORDERLY",
+"DERIVE",
+"BASED_BASE",
+"INTENTX_BASE",
+"GNS_APE",
+"JOJO_BASE",
+"BITORO_ORDERLY",
+"QUICK_PERP_ORDERLY",
+"VOOI_ORDERLY",
+"ASCENDEX_ORDERLY",
+"FUSIONX_ORDERLY",
+"DFYN_ORDERLY",
+"UNIBOT_ORDERLY",
+"OXMARKET_ORDERLY",
+"LOGX_ORDERLY",
+"EMDX_ORDERLY",
+"SHARPE_AI_ORDERLY",
+"PRIME_ORDERLY",
+"XADE_ORDERLY",
+"SABLE_ORDERLY",
+"BOOKX_ORDERLY",
+"WOOFI_ORDERLY",
+"PERPETUAL_OP",
+"FULCROM_CRONOS",
+"GMX_V2_AVAX",
+"MYX_OPBNB",
+"ELFI_ARB",
+"JUPITER"
 
 Examples:
 # Find traders with Pnl greater than 300000
